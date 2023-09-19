@@ -1,0 +1,17 @@
+{% assign snippet-id = include.snippet-id | default: page %}
+{% assign show-title = include.show-title | default: false %}
+{% assign show-in-nav = include.show-in-nav | default: false %}
+{% assign output = include.output | default: "markdown" %}
+{% assign level = include=hierachy-level | default: 1 %}
+{% assign pages = site.pages | where: "id", snippet-id %}
+
+{% for page in pages %}
+{% if show-title %}
+<h{{level | plus: 1}} {% if show-in-nav %}id="{{page.name}}" title="{{page.title}}"{% endif %}>{{ page.title }}</h{{level | plus: 1}}>
+{% endif %}
+{% if output == "raw" %}
+{{ page.content }}
+{% else %}
+{{ page.content | markdownify }}
+{% endif %}
+{% endfor %}

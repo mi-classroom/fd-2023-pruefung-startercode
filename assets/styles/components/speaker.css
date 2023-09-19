@@ -1,0 +1,18 @@
+/* Speaker
+###########################################################################  */
+
+
+.speaker + .speaker {
+    margin-top: var(--fluid-space-xl);
+}
+
+.speaker .talk h3 {
+    padding-top: var(--fluid-space-s);
+    font-weight: var(--fw-medium);
+    line-height: var(--lh-normal);
+}
+
+.speaker-from {
+    color: var(--darker);
+    margin-top: calc(var(--fluid-space-s) * -1);
+}

@@ -1,0 +1,20 @@
+{% assign source = include.source-collection %}
+{% assign snippets = site[source] %}
+
+{% for snippet in snippets %}
+
+{% if snippet.status == "wip" %}
+  {% assign class = "edit-layout" %}
+{% endif %}
+  <section class="{{class}}">
+    <div class="content">
+      <h2>{{ snippet.title }}</h2>
+      {{ snippet.content | markdownify }}
+    </div>
+
+    <div class="sidebar">
+      <a href="{{ snippet.url | relative_url}}"><span class="icon">chevron_right</span></a>
+    </div>
+
+  </section>
+{% endfor %}

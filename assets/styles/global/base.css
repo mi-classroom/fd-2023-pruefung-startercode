@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-text-dark);
+    font-family: var(--ff-normal);
+    font-size: var(--m);
+    font-weight: var(--fw-normal);
+    hyphens: auto;
+    line-height: var(--lh-normal);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--color-headline);
+    font-family: var(--ff-headline);
+    font-weight: bold;
+    hyphens: none;
+    line-height: var(--lh-tight);
+    text-wrap: balance;
+}
+
+h1 {
+    margin-bottom: var(--fluid-space-m);
+    font-size: var(--xxl);
+}
+
+h2 {
+    padding-top: var(--fluid-space-l);
+    margin-bottom: var(--fluid-space-m);
+    color: var(--darker);
+    font-size: var(--xl);
+}
+
+h3 {
+    margin-bottom: var(--fluid-space-s);
+    color: var(--darkest);
+    font-size: var(--l);
+}
+
+h4,
+h5,
+h6 {
+    margin-bottom: var(--fluid-space-s);
+    color: var(--darkest);
+    font-size: var(--m);
+}
+
+p,
+div {
+    hyphens: auto;
+
+    & > mark,
+    & > em {
+        background-color: transparent;
+        font-weight: var(--fw-medium);
+    }
+}
+
+a {
+    color: var(--color-accent);
+    text-decoration: none;
+}
+
+small {
+    font-size: 80%;
+    opacity: var(--op-medium);
+}
+
+p,
+ul,
+blockquote {
+    margin-bottom: var(--m);
+}
+
+p + h2,
+p + h3,
+p + h4 {
+    margin-top: var(--fluid-space-m);
+}
+
+/* Lists
+############################################################################ */
+
+ul {
+    padding-left: 0;
+
+    & > li {
+        display: block;
+        display: flex;
+
+        &::before {
+            padding-right: 0.5ch;
+            color: var(--dark);
+            content: "»";
+        }
+    }
+}
+
+/* Blockquote
+############################################################################ */
+
+blockquote {
+    padding-left: var(--fluid-space-s);
+    border-left: solid var(--border-width-l) var(--light);
+    margin-bottom: var(--fluid-space-l);
+}
+
+/* Table
+############################################################################ */
+
+
+/* Forms
+############################################################################ */
+
+form{
+    margin-bottom: var(--fluid-space-l);
+}
+
+
+/* Main
+############################################################################ */
+
+main {
+    padding-bottom: var(--fluid-space-l);
+}

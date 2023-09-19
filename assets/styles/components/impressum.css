@@ -1,0 +1,16 @@
+/* Impressum
+###########################################################################  */
+.impressum {
+    max-width: calc(var(--max-width-content) * 0.66);
+    margin-bottom: var(--fluid-space-m);
+}
+
+.impressum *:not(h4) {
+    font-size: var(--s);
+    line-height: var(--lh-normal);
+}
+
+.impressum h5 {
+    margin-top: var(--fluid-space-s);
+    margin-bottom: var(--half);
+}

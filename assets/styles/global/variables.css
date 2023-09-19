@@ -1,0 +1,88 @@
+:root {
+    --bfs: clamp(1rem, calc(0.8rem + 0.7vw), 1.5rem);
+
+    /* halbes geviert */
+    --half: calc(var(--bfs) / 2);
+
+    /* viertel geviert */
+    --quad: calc(var(--bfs) / 4);
+    --xxs: calc(var(--bfs) * 0.4);
+    --xs: calc(var(--bfs) * 0.6);
+    --s: calc(var(--bfs) * 0.8);
+    --m: calc(var(--bfs) * 1);
+    --l: calc(var(--bfs) * 1.3);
+    --xl: calc(var(--bfs) * 1.8);
+    --xxl: calc(var(--bfs) * 2.5);
+    --xxxl: calc(var(--bfs) * 3);
+    --xxxxl: calc(var(--bfs) * 4);
+    --fluid-space-xs: calc(var(--xs) + 0.5vw);
+    --fluid-space-s: calc(var(--s) + 1vw);
+    --fluid-space-m: calc(var(--m) + 2vw);
+    --fluid-space-l: calc(var(--l) + 3vw);
+    --fluid-space-xl: calc(var(--xl) + 4vw);
+    --hu-blau-1: #00376c;
+    --hu-blau-2: #004c90;
+    --hu-blau-3: #5b89b0;
+    --hu-blau-4: #d7dde1;
+    --hu-digital-blau: #00f;
+    --hu-hintergrund-1: #fafaf5;
+    --hu-hintergrund-2: #f0f0eb;
+    --hu-hintergrund-3: #e6e6e1;
+    --hu-schwarz-1: #0a0a19;
+    --hu-schwarz-2: #74747e;
+    --hu-schwarz-3: #cfcfd1;
+    --hu-accent-1: #e5007c;
+    --hu-accent-2: #821f71;
+    --hu-accent-3: #e74306;
+    --hu-accent-4: #e30031;
+    --hu-accent-5: #ffd400;
+    --hu-accent-6: #009ee3;
+    --light: var(--hu-hintergrund-2);
+    --lighter: var(--hu-hintergrund-1);
+    --lightest: #efefef;
+    --lighten: rgb(255 255 255 / 50%);
+    --lighten-strong: rgb(255 255 255 / 80%);
+    --dark: var(--hu-schwarz-3);
+    --darker: var(--hu-schwarz-2);
+    --darkest: var(--hu-schwarz-1);
+    --darken: rgb(0 0 0 / 10%);
+    --darken-medium: rgb(0 0 0 / 30%);
+    --color-text-dark: var(--darkest);
+    --color-text-light: var(--lightest);
+    --color-headline: var(--darker);
+    --color-accent: var(--hu-accent-2);
+    --color-decoration: var(--dark);
+    --color-background: var(--lightest);
+    --color-hero-background: var(--hu-accent-2);
+    --color-hero-text: var(--lightest);
+    --ff-normal: Atkinson, verdana, arial, sans-serif;
+    --ff-serif: Georgia, serif;
+    --ff-code: courier, monospace;
+    --ff-headline: Atkinson, verdana, arial, monospace;
+    --ff-icons: "MaterialIcons", serif;
+    --fw-normal: 400;
+    --fw-medium: 500;
+    --fw-bold: 700;
+    --lh-normal: 140%;
+    --lh-tight: 110%;
+    --lh-loose: 150%;
+    --tr-fast: 0.2s;
+    --tr-slow: 0.6s;
+    --tr-delay: 1.2s;
+    --op-low: 0.4;
+    --op-medium: 0.6;
+    --shadow-l: 0 0 var(--xs) rgb(0 0 0 / 50%);
+    --shadow-xl: var(--half) var(--half) var(--m) rgb(0 0 0 / 30%);
+    --border-width-s: 1px;
+    --border-width-m: 3px;
+    --border-width-l: 6px;
+    --border-radius-s: 3px;
+    --max-width-partner-col: 20rem;
+    --max-width-input: 20rem;
+    --max-width-content: calc(var(--m) * 50);
+    --max-width-body: 90rem;
+}
+
+.home-fjb {
+    --color-hero-background: var(--hu-blau-1);
+}

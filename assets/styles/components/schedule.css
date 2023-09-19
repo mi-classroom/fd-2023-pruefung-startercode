@@ -1,0 +1,54 @@
+/* Schedule
+###########################################################################  */
+.schedule {
+    padding-top: var(--fluid-space-s);
+    padding-bottom: var(--fluid-space-s);
+}
+
+.schedule dl {
+    padding-bottom: var(--s);
+}
+
+.schedule dl dt {
+    font-weight: var(--fw-bold);
+}
+
+.schedule dl dd p,
+.schedule dl dd ul {
+    margin-bottom: 0;
+}
+
+.schedule dl dd p + p {
+    margin-top: var(--m);
+}
+
+.schedule dl dd p strong {
+    display: block;
+    color: var(--hu-blau-2);
+    font-weight: var(--fw-normal);
+}
+
+.schedule dl dd h3 {
+    font-size: var(--m);
+    line-height: var(--lh-normal);
+}
+
+@container (min-width: 40rem) {
+    .schedule dl {
+        display: grid;
+        grid-template-columns: 18ch 1fr;
+    }
+
+    .schedule dl dt::before {
+        display: block;
+        width: 33vw;
+        border-top: solid var(--border-width-s) var(--dark);
+        margin-bottom: var(--s);
+        content: "";
+    }
+
+    .schedule dl dd {
+        padding-top: var(--s);
+        padding-bottom: var(--s);
+    }
+}

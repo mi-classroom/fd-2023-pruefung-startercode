@@ -1,0 +1,30 @@
+/* Main Footer
+###########################################################################  */
+.main-footer {
+    padding: var(--fluid-space-s);
+    background-color: var(--darker);
+}
+
+.main-footer h3 {
+    font-weight: var(--fw-normal);
+}
+
+.main-footer ul {
+    display: block;
+}
+
+.main-footer ul li {
+    display: block;
+}
+
+.main-footer ul li::before {
+    content: "";
+}
+
+.main-footer * {
+    color: var(--lightest);
+}
+
+.main-footer .partner {
+    max-width: var(--max-width-partner-col);
+}

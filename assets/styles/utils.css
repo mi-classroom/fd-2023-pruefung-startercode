@@ -1,0 +1,85 @@
+/* Reverse: Flips Text (SPAM)
+############################################################################ */
+.rev {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+
+/* Is invers
+############################################################################ */
+.is-invers {
+  background-color: var(--color-hero-background);
+}
+
+.is-invers * {
+  color: var(--color-hero-text);
+}
+
+.is-invers h1, .is-invers h2, .is-invers h3 {
+  color: var(--light);
+}
+
+/* Is dark
+############################################################################ */
+.is-dark {
+  background-color: var(--darker);
+}
+
+.is-dark * {
+  color: var(--color-hero-text);
+}
+
+.is-dark h1, .is-dark h2, .is-dark h3 {
+  color: var(--light);
+}
+
+/* Is Full Width
+############################################################################ */
+.is-full-width {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  margin-bottom: 0 !important;
+  padding: var(--fluid-space-m);
+}
+
+/* Has separator
+############################################################################ */
+.has-separator:before {
+  content: "";
+  display: block;
+  border-top: solid var(--border-width-l) var(--hu-blau-2);
+  width: 33vw;
+}
+
+/* Is Content Headline
+############################################################################ */
+.is-content-headline {
+  color: var(--color-accent);
+  font-size: var(--xxl);
+  padding-bottom: var(--fluid-space-m);
+}
+
+/* Is Headline Group
+############################################################################ */
+.is-headline-group {
+  padding-top: var(--fluid-space-m);
+  margin-bottom: var(--fluid-space-m);
+}
+
+.is-headline-group > * {
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.is-headline-group > h2 {
+  margin-bottom: var(--half);
+}
+
+/* Is Separator
+############################################################################ */
+.is-separator {
+  display: inline-block;
+  padding-left: 0.5ch;
+  padding-right: 0.5ch;
+  color: var(--darker);
+}

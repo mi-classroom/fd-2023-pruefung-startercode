@@ -1,0 +1,15 @@
+{% assign items=site.schedule-rahmenprogramm | sort: "begin"  %}
+
+<div class="schedule">
+{% for item in items %}
+<dl class="schedule-item">
+  <dt>{{ item.begin | date: "%H:%M" }}{% if (item.end | strip_newlines) != "" %} – {{ item.end | date: "%H:%M" }}{% endif %} Uhr</dt>
+  {% assign content = item.content | strip_newlines %}
+  <dd>
+  {% if item.get-more %}<a href="{{item.get-more}}">{% endif %}
+  {% if content == "" %}{{ item.title }}{% else %}{{ item.content }}{% endif %}
+  {% if item.get-more %}</a>{% endif %}
+  </dd>
+</dl>
+{% endfor %}
+</div>

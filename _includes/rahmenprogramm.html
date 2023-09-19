@@ -1,0 +1,18 @@
+{% assign level = include=hierachy-level | default: 1 %}
+{% assign pages = site.pages | where: "id", "rahmenprogramm" %}
+{% assign rahmenprogramm-page = pages.first %}
+{% capture programmablauf %}
+{% include schedule-rahmenprogramm.html %}
+{% endcapture %}
+
+<h{{ level | plus: 1}}>{{ rahmenprogramm-page.title }}</h{{ level | plus: 1}}>
+
+<dl class="dl-inline">
+  <dt>Ort</dt>
+  <dd>{{ rahmenprogramm-page.venue }}</dd>
+  <dt>Zeit</dt>
+  <dd>{{ rahmenprogramm-page.when }}</dd>
+</dl>
+
+
+{{ rahmenprogramm-page.content | replace: "--PROGRAMMABLAUF--", programmablauf | markdownify }}

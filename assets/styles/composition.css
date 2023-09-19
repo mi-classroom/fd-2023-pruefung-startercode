@@ -1,0 +1,35 @@
+main > *:not(.hero) {
+  margin: var(--fluid-space-m);
+}
+
+section, .section {
+  container-type: inline-size;
+}
+
+.section {
+  padding-bottom: var(--fluid-space-m);
+}
+
+body {
+  background-color: var(--lightest);
+  display: grid;
+  grid-template-rows: auto max-content;
+}
+
+@media screen and (min-width: 80rem) {
+  body {
+    grid-template-columns: 60rem 1fr;
+  }
+}
+
+@media screen and (min-width: 100rem) {
+  body {
+    display: grid;
+    grid-template-columns: 80rem 1fr;
+  }
+}
+
+.content-wrap {
+  background-color: var(--lighter);
+  max-width: 80rem;
+}

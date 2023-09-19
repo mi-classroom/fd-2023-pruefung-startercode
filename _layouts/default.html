@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="{{ site.baseurl }}/">
+
+    <title>{{ site.data.settings.basic_settings.site_title }} // {% if page.title %}{{ page.title }}{% endif %}</title>
+
+    <link rel="icon" type="image/x-icon" href="{{ site.baseurl }}/assets/images/favicons/favicon.ico">
+		<link rel="stylesheet" href="{{ site.baseurl }}/assets/styles/global/reset.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/styles/global/variables.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/styles/global/fonts.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/styles/global/icons.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/styles/global/base.css">
+
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/styles/composition.css">
+
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/styles/components/deko.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/styles/components/footer.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/styles/components/header.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/styles/components/hero.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/styles/components/impressum.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/styles/components/lists.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/styles/components/panel.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/styles/components/schedule.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/styles/components/sidebar.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/styles/components/speaker.css">
+
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/styles/components/registration.css">
+
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/styles/layouts/article.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/styles/layouts/content-blocks.css">
+
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/styles/utils.css">
+    
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="{{ site.baseurl }}/assets/scripts/main.js"></script>
+
+  </head>
+
+  <body class="{{ page.layout }}">
+    <div class="content-wrap">
+      {% include header.html header-separator=page.header-separator snippet-id=page.header-snippet-id %}
+  
+      <main>
+        {{ content }}
+      </main>
+    </div>
+
+    <aside class="sidebar">
+      {% include sidebar.html %}
+    </aside>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

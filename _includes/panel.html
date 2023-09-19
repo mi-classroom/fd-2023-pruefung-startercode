@@ -1,0 +1,18 @@
+{% assign panel-id=include.panel-id %}
+{% assign panel-meta = site.panel-hosts | where: "panel-id", panel-id | first %}
+
+<section class="panel">
+  <header class="panel-header is-headline-group">
+    <h2 id="{{panel-id}}" title="Panel {{panel-id}}, {{panel-meta.venue}}" class="panel-headline">Panel {{panel-id}}. {{panel-meta.title}}</h2>
+    <p class="panel-host">Leitung: {{panel-meta.host}}<span class="is-separator">//</span>{{panel-meta.from}}</p>
+    <p class="panel-venue">{{panel-meta.venue}}</p>
+  </header>
+
+{% assign panel-items = site.panel-items | where: "panel-id", panel-id | sort: 'begin' %}
+{% for item in panel-items %}
+  <div class="panel-item" id="{{item.url | slugify }}">
+    <h4><span class="begin">{{item.begin | date: "%H:%M" }} Uhr</span> {{item.speaker}}<span class="is-separator">//</span>{{item.from}}</h4>
+    {{item.content}}
+  </div>
+{% endfor %}
+</section>

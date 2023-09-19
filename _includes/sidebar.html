@@ -1,0 +1,48 @@
+<div class="logo">
+  <a href="{{"/" | relative_url }}"><img src="{{ "/assets/images/logo-hu-berlin.svg" | relative_url }}"
+      alt="Logo der HU Berlin"></a>
+</div>
+
+<div class="search">
+  <div class="search-field-wrap">
+    <input type="text" class="search-field" data-js-search id="search" placeholder="nach Vorträgen suchen" />
+    <i class="icon icon--inline">search</i>
+  </div>
+
+  <div class="search-results">
+    <ul id="search-results" data-js-search-results>
+      <!--li class="search-result-item">
+        <a href="parallel-talks-3/#panel-items-dollinger-rocher">
+          <h4>Prof. Dr. Bernd Dollinger &amp; Dr. Michael Rocher</h4>
+          <h5><span class="begin">12.09.2023 09:00</span><span class="is-separator">//</span>Raum: 1.506</h5>
+          <p>Unfreiheit und Ungleichheit. Jugendkriminalität um 1800</p>
+        </a>
+      </li><li class="search-result-item">
+        <a href="parallel-talks-3/#panel-items-schollmeyer">
+          <h4>Dr. Friedrich Schollmeyer</h4>
+          <h5><span class="begin">12.09.2023 09:00</span><span class="is-separator">//</span>Raum: 1.501</h5>
+          <p>Pädagogik als Organisationsform politisch-ethischer Konflikte? Ideen- und begriffsgeschichtliche Erkundungen in Schleiermachers pädagogischen Schriften</p>
+        </a>
+      </li><li class="search-result-item">
+        <a href="parallel-talks-3/#panel-items-satiesteban">
+          <h4>Andra Satiesteban</h4>
+          <h5><span class="begin">12.09.2023 09:30</span><span class="is-separator">//</span>Raum: 1.506</h5>
+          <p>Politische Säuberungen als Praxis der Ungleichheit: Der Umgang mit Lehrerinnen in Madrid im frühen Franquismus (1936-1945)</p>
+        </a>
+      </li-->
+    </ul>
+  </div>
+</div>
+
+<h3>Gehe zu</h3>
+
+<div class="sidebar-navigation">
+
+  <ul>
+  {% for item in site.data.settings.basic_settings.navigation %}
+    <li><a href="{{ item.url }}">{{ item.name }}</a></li>
+  {% endfor %}
+  </ul>
+  <div data-js-page-navigation></div>
+
+</div>

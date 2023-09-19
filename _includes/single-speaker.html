@@ -1,0 +1,30 @@
+{% assign speaker = include.speaker %}
+{% assign level = include=hierachy-level | default: 1 %}
+
+{% if level == 1 %}
+{% assign content = speaker.content | replace: "h5", "h6" %}
+{% assign content = content | replace: "h4", "h5" %}
+{% assign content = content | replace: "h3", "h4" %}
+{% assign content = content | replace: "h2", "h3" %}
+{% assign content = content | replace: "h1", "h2" %}
+{% endif %}
+
+{% if level == 2 %}
+{% assign content = speaker.content | replace: "h5", "h7" %}
+{% assign content = content | replace: "h4", "h6" %}
+{% assign content = content | replace: "h3", "h5" %}
+{% assign content = content | replace: "h2", "h4" %}
+{% assign content = content | replace: "h1", "h3" %}
+{% endif %}
+
+
+<h{{level | plus: 1}} id="{{speaker.name | slugify }}" title="{{speaker.name}}" class="speaker-name">{{speaker.name}}</h{{level | plus: 1}}>
+<h{{level | plus: 2}} class="speaker-from">{{speaker.from}}</h{{level | plus: 2}}>
+
+<div class="about">
+{{speaker.about | markdownify }}
+</div>
+
+<div class="talk">
+{{ content | markdownify }}
+</div>

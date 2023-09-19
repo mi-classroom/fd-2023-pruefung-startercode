@@ -1,0 +1,24 @@
+{% assign snippet-id=include.snippet-id %}
+
+{% if include.header-separator == true %}
+  {% assign separator = "has-header-separator" %}
+{% else %}
+  {% assign separator = "" %}
+{% endif %}
+
+<header class="main-header">
+  <div class="main-header-content {{separator}}">
+    <h1 class="title">{{site.data.settings.basic_settings.site_title}}</h1>
+    <h2 class="subtitle"><span>{{site.data.settings.basic_settings.site_subtitle}}</span><span>{{site.data.settings.basic_settings.site_subtitle_2}}</span><span>{{site.data.settings.basic_settings.site_place}}</span></h2>
+  </div>
+  <div class="logo">
+    <a href="{{"/" | relative_url }}"><img src="{{ "/assets/images/logo-hu-berlin.svg" | relative_url }}"
+        alt="Logo der HU Berlin"></a>
+  </div>
+</header>
+
+{% if snippet-id %}
+<div class="section hero is-invers">
+  {% include snippet.html snippet-id=snippet-id %}
+</div>
+{% endif %}

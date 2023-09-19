@@ -1,0 +1,47 @@
+---
+panel-map:
+  - id: "I."
+    url: "parallel-talks-1"
+  - id: "II."
+    url: "parallel-talks-2"
+  - id: "III."
+    url: "parallel-talks-3"
+  - id: "IV."
+    url: "parallel-talks-4"
+  - id: "V."
+    url: "parallel-talks-5"
+---
+{% assign hosts=site.panel-hosts %}
+[
+{% assign presentations=site.panel-items|sort:'begin' %}
+{% for item in presentations %}
+{% for host in hosts %}
+{% if item.panel-id == host.panel-id %}
+{% capture panel-title %}{{ host.title }}{% endcapture %}
+{% capture panel-venue %}{{ host.venue }}{% endcapture %}
+{% endif %}
+{% endfor %}
+{% for entry in page.panel-map %}
+{% assign entry-pattern = "-" | append: entry.id %}
+{% assign item-pattern = "-" | append: item.panel-id %}
+{% if item-pattern contains entry-pattern %}
+{% capture page-url %}{{ entry.url }}{% endcapture %}
+{% break %}
+{% else %}
+{% capture page-url %}{{ "-" }}{% endcapture %}
+{% endif %}
+{% endfor %}
+{
+  "id": "{{ item.id | slugify }}",
+  "title": "{{ item.content | strip_html | strip_newlines | strip | escape }}",
+  "begin": "{{ item.begin | date: "%e.%m.%Y %H:%M" }}",
+  "panelId": "{{ item.panel-id }}",
+  "panelTitle": "{{ panel-title }}",
+  "panelVenue": "{{ panel-venue }}",
+  "speaker": "{{ item.speaker }}",
+  "pageUrl": "{{ page-url }}",
+  "collection": "{{ item.collection }}"
+}
+{% unless forloop.last %},{% endunless %}
+{% endfor %}
+]

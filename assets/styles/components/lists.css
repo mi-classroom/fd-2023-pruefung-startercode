@@ -1,0 +1,42 @@
+/* Definition List Inline
+###########################################################################  */
+.dl-inline {
+    margin-bottom: var(--fluid-space-s);
+}
+
+.dl-inline dt {
+    display: inline;
+    font-weight: var(--fw-bold);
+}
+
+.dl-inline dt::after {
+    content: ":";
+}
+
+.dl-inline dt::before {
+    display: block;
+    height: var(--fluid-space-s);
+    content: "";
+}
+
+.dl-inline dd {
+    display: inline;
+    padding-bottom: var(--fluid-space-s);
+}
+
+/* Simple List
+############################################################################ */
+dl.simple-def-list {
+    padding-bottom: var(--fluid-space-s);
+}
+
+dl.simple-def-list dt {
+    float: left;
+    font-weight: var(--fw-bold);
+}
+
+dl.simple-def-list dt::after {
+    display: inline-block;
+    margin-right: var(--quad);
+    content: ":";
+}

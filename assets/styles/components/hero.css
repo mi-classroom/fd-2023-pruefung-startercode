@@ -1,0 +1,14 @@
+/* Hero
+###########################################################################  */
+.hero {
+    padding: var(--fluid-space-m);
+}
+
+.hero h1 {
+    font-size: var(--xxxl);
+}
+
+.hero p {
+    font-size: var(--l);
+    line-height: var(--lh-normal);
+}

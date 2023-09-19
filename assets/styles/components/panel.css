@@ -1,0 +1,43 @@
+/* Panel
+###########################################################################  */
+.panel h4 {
+    margin-bottom: var(--half);
+}
+
+.panel h4 .begin {
+    display: block;
+    padding-bottom: var(--quad);
+    font-weight: var(--fw-normal);
+}
+
+.panel-header p {
+    color: var(--color-accent);
+    font-weight: var(--fw-bold);
+}
+
+.panel-host,
+.panel-venue{
+    font-family: var(--ff-headline);
+    line-height: var(--lh-tight);
+}
+
+/* Panel Item
+###########################################################################  */
+
+.panel-item {
+    transition: all var(--tr-slow) ease-in-out var(--tr-delay);
+  }
+
+.panel-item.is-focused {
+    border-left: solid var(--border-width-m) var(--color-accent);
+    padding-left: var(--m);
+
+    padding-top: var(--m);
+    padding-bottom: var(--xs);
+    margin-top: var(--m);
+    margin-bottom: var(--m);
+  }
+
+.panel-item + .panel-item {
+  margin-top: var(--xl);
+}

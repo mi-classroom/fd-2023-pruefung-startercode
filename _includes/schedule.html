@@ -1,0 +1,26 @@
+{% assign content-for-day=include.content-source %}
+{% assign items=site.[content-for-day] | sort: "begin" %}
+
+<div class="schedule">
+  {% for item in items %}
+  <dl class="schedule-item">
+    <dt>{{ item.begin | date: "%H:%M" }}{% if (item.end | strip_newlines) != "" %} – {{ item.end | date: "%H:%M" }}{% endif %} Uhr</dt>
+    {% assign content = item.content | strip_newlines | strip_html %}
+    {% if content == "" %}
+    {% assign content = item.title  %}
+    {% endif %}
+
+    {% if item.venue %}
+    {% assign content = content | strip_newlines | append:", " | append: item.venue %}
+    {% endif %}
+
+    <dd>
+      {% if item.get-more %}<a href="{{item.get-more}}">{% endif %}
+      {% if item.jump-to %}<a href="#{{item.jump-to}}">{% endif %}
+      {{ content }}
+      {% if item.get-more %}</a>{% endif %}
+      {% if item.jump-to %}</a>{% endif %}
+    </dd>
+  </dl>
+  {% endfor %}
+</div>

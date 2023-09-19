@@ -1,0 +1,7 @@
+{% assign speakers = site.keynote-speaker %}
+
+{% for speaker in speakers %}
+<section class="speaker">
+  {% include single-speaker.html speaker=speaker hierachy-level=2 %}
+</section>
+{% endfor %}
