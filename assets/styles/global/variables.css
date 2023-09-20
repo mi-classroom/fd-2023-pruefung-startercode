@@ -6,6 +6,8 @@
 
     /* viertel geviert */
     --quad: calc(var(--bfs) / 4);
+
+    /* statische Größen */
     --xxs: calc(var(--bfs) * 0.4);
     --xs: calc(var(--bfs) * 0.6);
     --s: calc(var(--bfs) * 0.8);
@@ -15,11 +17,15 @@
     --xxl: calc(var(--bfs) * 2.5);
     --xxxl: calc(var(--bfs) * 3);
     --xxxxl: calc(var(--bfs) * 4);
+
+    /* dynamische Abstände, abhängig von der Größe des Viewports */
     --fluid-space-xs: calc(var(--xs) + 0.5vw);
     --fluid-space-s: calc(var(--s) + 1vw);
     --fluid-space-m: calc(var(--m) + 2vw);
     --fluid-space-l: calc(var(--l) + 3vw);
     --fluid-space-xl: calc(var(--xl) + 4vw);
+
+    /* Farben */
     --hu-blau-1: #00376c;
     --hu-blau-2: #004c90;
     --hu-blau-3: #5b89b0;
@@ -47,6 +53,8 @@
     --darkest: var(--hu-schwarz-1);
     --darken: rgb(0 0 0 / 10%);
     --darken-medium: rgb(0 0 0 / 30%);
+
+    /* Funktionale Farbzuweisungen */
     --color-text-dark: var(--darkest);
     --color-text-light: var(--lightest);
     --color-headline: var(--darker);
@@ -55,34 +63,46 @@
     --color-background: var(--lightest);
     --color-hero-background: var(--hu-accent-2);
     --color-hero-text: var(--lightest);
+
+    /* Schrfitarten */
     --ff-normal: Atkinson, verdana, arial, sans-serif;
     --ff-serif: Georgia, serif;
     --ff-code: courier, monospace;
     --ff-headline: Atkinson, verdana, arial, monospace;
     --ff-icons: "MaterialIcons", serif;
+
+    /* Schriftgewichte */
     --fw-normal: 400;
     --fw-medium: 500;
     --fw-bold: 700;
+
+    /* Zeilenabstände */
     --lh-normal: 140%;
     --lh-tight: 110%;
     --lh-loose: 150%;
+
+    /* Transitions */
     --tr-fast: 0.2s;
     --tr-slow: 0.6s;
     --tr-delay: 1.2s;
+
+    /* Opacity */
     --op-low: 0.4;
     --op-medium: 0.6;
+
+    /* Box-Shadows */
     --shadow-l: 0 0 var(--xs) rgb(0 0 0 / 50%);
     --shadow-xl: var(--half) var(--half) var(--m) rgb(0 0 0 / 30%);
+
+    /* Borders */
     --border-width-s: 1px;
     --border-width-m: 3px;
     --border-width-l: 6px;
     --border-radius-s: 3px;
+
+    /* Max-Widths */
     --max-width-partner-col: 20rem;
     --max-width-input: 20rem;
     --max-width-content: calc(var(--m) * 50);
     --max-width-body: 90rem;
-}
-
-.home-fjb {
-    --color-hero-background: var(--hu-blau-1);
 }
