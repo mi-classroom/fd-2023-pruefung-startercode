@@ -38,5 +38,5 @@ Für weitere Informationen oder Genehmigungen bezüglich der Nutzung dieses Mate
 
 ```
 
-Mehr Infos zu [Liquid](https://jekyllrb.com/docs/liquid/). Ist aber für die Feature Requests nicht erforderlich 😎
+Mehr Infos zu [Liquid](https://jekyllrb.com/docs/liquid/). Ist aber für die Feature Requests nicht erforderlich 😎 👸🏻
 
